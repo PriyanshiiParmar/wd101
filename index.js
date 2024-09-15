@@ -17,7 +17,7 @@ const displayEntries = () => {
         let emailCell = `<td style = "border:1px solid black" class="table-cell">${entry.email}</td>`;
         let pwdCell = `<td style = "border:1px solid black" class="table-cell">${entry.password}</td>`;
         let dobCell = `<td style = "border:1px solid black" class="table-cell">${entry.dob}</td>`;
-        let acceptCell = `<td style = "border:1px solid black" class="table-cell">${entry.accept ? 'Accepted' : 'Not Accepted'}</td>`;
+        let acceptCell = `<td style = "border:1px solid black" class="table-cell">${entry.accept ? 'true' : 'false'}</td>`;
 
         return `<tr>${nameCell}${emailCell}${pwdCell}${dobCell}${acceptCell}</tr>`;
     }).join("\n");
