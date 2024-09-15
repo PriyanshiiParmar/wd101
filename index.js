@@ -3,9 +3,9 @@ const userForm = document.getElementById("user-form");
 const retrieveEntries = () => {
     let entries = localStorage.getItem("userEntries");
     if (entries) {
-        entries = JSON.parse(entries); // Convert back into JSON
+        entries = JSON.parse(entries); 
     } else {
-        entries = []; // Initialize as an empty array if null
+        entries = [];
     }
     return entries;
 };
@@ -79,5 +79,4 @@ const saveForm = (event) => {
 
 userForm.addEventListener("submit", saveForm);
 
-// Display entries when the page loads
 displayEntries();
