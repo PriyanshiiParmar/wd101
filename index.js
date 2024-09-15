@@ -5,7 +5,7 @@ const retrieveEntries = () => {
     if (entries) {
         entries = JSON.parse(entries); 
     } else {
-        entries = [];
+        entries = []; 
     }
     return entries;
 };
@@ -26,8 +26,8 @@ const displayEntries = () => {
         <th>Name</th>
         <th>Email</th>
         <th>Password</th>
-        <th>Date of Birth</th>
-        <th>Accept Terms</th>
+        <th>Dob</th>
+        <th>Accepted terms?</th>
     </tr>`;
 
     const table = `<thead>${tableHeader}</thead><tbody>${tableRows}</tbody>`;
@@ -41,12 +41,9 @@ const validateDOB = (dob) => {
     const age = today.getFullYear() - birthDate.getFullYear();
     const monthDiff = today.getMonth() - birthDate.getMonth();
 
-    // Adjust age if birth date hasn't occurred yet this year
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     }
-
-    // Validate age between 18 and 55
     return age >= 18 && age <= 55;
 };
 
