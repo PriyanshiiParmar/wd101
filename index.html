@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background: #f2f2f2;
+}
+#user-form{
+    box-shadow: 0px 0px 10px rgb(172, 171, 171);
+    width: 25%;
+    background: white;
+    padding: 30px;
+    top: 18%;
+    left: 34%;
+    position: absolute;
+}
+label{
+    margin-top: 18px;
+}
+input{
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(246, 246, 246);
+}
+input:focus{
+    border: none;
+    outline: none;
+}
+h1{
+    text-align: center;
+}
+.form{
+    display: flex;
+    background: white;
+    justify-content: space-between;
+}
+#name:focus:invalid{
+    border: 1px soid red;
+}
+#submit{
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    width:100px;
+    border-radius: 8px;
+    background: rgb(6, 146, 6);
+}
+.enteries{
+    align-items: center;
+    box-shadow: 0px 0px 10px rgb(172, 171, 171);
+    position: absolute;
+    top:82%;
+    left: 20%;
+    width: 55%;
+    background-color: white;
+    padding: 30px;
+}
+th{
+    padding:0  40px;
+}
+tr{
+    width:10%
+}
+    </style>
+</head>
+<body>
+    <form id="user-form">
+        <h1>Registration Form</h1>
+        <div class="form">
+            <label>Name</label><input required id = "name" type = "text" placeholder="Enter Full Name">
+        </div>
+        <div class="form">
+            <label>Email</label><input required id = "email" type = "email" placeholder="Enter Email">
+        </div>
+        <div class="form">
+            <label>Password</label><input required id = "password" type = "password" placeholder="Enter Password">
+        </div>
+        <div class="form">
+            <label>Date of Birth</label><input required id = "dob" type = "date" placeholder="Enter Date of Birth">
+        </div>
+        <div >
+            Accept terms and Conditions<input required type = "checkbox" id = "accept">
+        </div>
+        <div class="form">
+            <input  id = "submit" type="submit">
+        </div>
+    </div>
+    </form>
+    <div class="enteries">
+        <h1>Enteries</h1>
+        <table id="entries-table">
+                 </thead>
+                 <tbody id = "user-entry">
+                 </tbody>
+        </table>
+    </div>
+<script src="./index.js">
+    
+</script>
+</body>
+</html>
